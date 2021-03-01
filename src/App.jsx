@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import About from './About';
 
 const App = () =>{
    
@@ -12,7 +13,9 @@ const App = () =>{
             <button onClick={()=> setNumber(number+1)} >+</button>
             <p>{number}</p>
             <button onClick={()=>setNumber(number-1)} >-</button>
-            
+            <About name="tohin" dist="Cumilla" />
+            <hr/>
+            <About name="Rahim" dist="Rangpur" />
         </>
     )
 }
