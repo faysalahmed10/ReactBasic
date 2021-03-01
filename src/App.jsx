@@ -1,10 +1,18 @@
 import React,{useEffect} from 'react'
 import About from './About';
-
+import Axios from 'axios'
 const App = () =>{
    
        useEffect (()=>{
-           console.log('Hello effect sunny')
+           const request = async () =>{
+                await Axios ({
+                    method: "get",
+                    url: 'https://jsonplaceholder.typicode.com/users'
+                }).then(response=>{
+                    console.log(response.data)
+                })
+           }
+           request()
        },[])
        
   
